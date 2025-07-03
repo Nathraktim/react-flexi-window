@@ -8,10 +8,12 @@ A flexible, draggable, and resizable window component for React with zero depend
 - 📏 **Resizable**: Drag edges and corners to resize windows
 - 🔒 **Boundary constraints**: Optionally confine windows to viewport
 - 🎨 **Customizable styling**: Built-in color themes and effects
-- 📱 **Responsive**: Adapts to viewport changes
+- 📱 **Responsive**: Adapts to viewport changes automatically
 - 🚀 **Zero dependencies**: No external dependencies except React
 - 💨 **Lightweight**: Small bundle size
 - 🔧 **TypeScript support**: Full TypeScript definitions included
+- 🎯 **Smart interactions**: Respects interactive elements (buttons, inputs, etc.)
+- ⚡ **Performance optimized**: Uses efficient event handling and callbacks
 
 ## Installation
 
@@ -191,6 +193,23 @@ windowColor="emerald-400"        // Emerald with 100% opacity (default)
 </WindowComponent>
 ```
 
+### Interactive Content Example
+```jsx
+<WindowComponent
+  w={400}
+  h={300}
+  boundary={true}
+  windowColor="blue-500/20"
+  windowBorderRadius="lg"
+>
+  <form style={{ padding: '20px' }}>
+    <input type="text" placeholder="Enter text..." />
+    <button type="submit">Submit</button>
+    <textarea placeholder="Your message..."></textarea>
+  </form>
+</WindowComponent>
+```
+
 ## TypeScript Support
 
 The component includes full TypeScript definitions:
@@ -208,6 +227,19 @@ const MyWindow: React.FC<WindowComponentProps> = (props) => {
 - Chrome/Edge 88+
 - Firefox 84+
 - Safari 14+
+
+## Behavior Details
+
+### Smart Interaction Handling
+- **Interactive Elements**: The component automatically prevents dragging when clicking on interactive elements like buttons, inputs, textareas, links, and contentEditable elements
+- **Viewport Responsiveness**: Windows automatically adjust their position and size when the browser window is resized
+- **Boundary Enforcement**: When `boundary={true}`, windows are constrained both during dragging and when the viewport changes
+- **Text Selection**: Text selection is preserved when not interacting with the window
+
+### Performance Optimizations
+- Uses `useCallback` for event handlers to prevent unnecessary re-renders
+- Efficient event listener management (adds/removes based on interaction state)
+- Minimal DOM updates during dragging and resizing
 
 ## Contributing
 

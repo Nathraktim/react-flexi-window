@@ -19,6 +19,12 @@ This directory contains usage examples for the `react-flexi-window` component.
 - Random positioning and sizing
 - Control panel for window management
 
+### 4. **AdvancedInteractionExample.jsx** - Interactive Elements
+- Forms with inputs, textareas, and buttons
+- Todo list with checkboxes and delete buttons
+- Demonstrates smart interaction handling
+- Shows how interactive elements work seamlessly within windows
+
 ## Running the Examples
 
 ### Option 1: Copy to Your Project

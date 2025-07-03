@@ -150,12 +150,25 @@ windowColor="emerald-400"
 ### Dragging
 - Click and drag the window content area to move the window
 - If `boundary` is true, window will be constrained to viewport
+- **Smart Element Detection**: Dragging is automatically disabled when clicking on interactive elements:
+  - `INPUT`, `TEXTAREA`, `BUTTON`, `SELECT`, `A` (links)
+  - Elements with `contentEditable` attribute
+  - Elements inside links or buttons
 
 ### Resizing
 - Drag the edges or corners of the window to resize
 - Window will respect `minW`, `minH`, `maxW`, and `maxH` constraints
 - Corner handles allow diagonal resizing
 - Edge handles allow single-axis resizing
+
+### Viewport Responsiveness
+- Windows automatically adjust when the browser window is resized
+- Size constraints are re-evaluated on viewport changes
+- Position is adjusted to keep windows within boundaries (when `boundary` is enabled)
+
+### Text Selection
+- Text selection is preserved when not actively dragging or resizing
+- During interactions, text selection is temporarily disabled for better UX
 
 ### Resize Handles
 - **Top edge**: Resize height (cursor: n-resize)
@@ -174,3 +187,31 @@ windowColor="emerald-400"
 3. **Responsive Design**: Use `maxW="viewport"` and `maxH="viewport"` for responsive behavior
 4. **Boundary Constraints**: Enable `boundary` prop for better UX in confined spaces
 5. **Performance**: Avoid excessive re-renders by memoizing child components if needed
+6. **Interactive Content**: Place interactive elements (forms, buttons) inside windows - they work seamlessly
+7. **Accessibility**: Ensure proper focus management and keyboard navigation in your window content
+8. **Event Handling**: The component handles most mouse events automatically, avoid conflicting event listeners
+
+## Advanced Usage
+
+### Dynamic Window Management
+```jsx
+const [windows, setWindows] = useState([]);
+
+const addWindow = () => {
+  setWindows(prev => [...prev, { id: Date.now(), x: 50, y: 50 }]);
+};
+
+const removeWindow = (id) => {
+  setWindows(prev => prev.filter(w => w.id !== id));
+};
+```
+
+### Form Integration
+```jsx
+<WindowComponent windowColor="blue-500/20" boundary={true}>
+  <form style={{ padding: '20px' }}>
+    <input type="text" placeholder="Type here..." />
+    <button type="submit">Submit</button>
+  </form>
+</WindowComponent>
+```

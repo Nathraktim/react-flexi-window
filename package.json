@@ -1,7 +1,7 @@
 {
   "name": "react-flexi-window",
   "description": "A flexible, draggable, and resizable window component for React with zero dependencies.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "license": "MIT",
   "author": {
