@@ -1,0 +1,74 @@
+{
+  "name": "react-flexi-window",
+  "description": "A flexible, draggable, and resizable window component for React with zero dependencies.",
+  "version": "1.0.0",
+  "private": false,
+  "license": "MIT",
+  "author": {
+    "name": "Raktimjyoti Nath",
+    "email": "raktimjyotinath59684@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nathraktim/react-flexi-window.git"
+  },
+  "homepage": "https://github.com/nathraktim/react-flexi-window#readme",
+  "bugs": {
+    "url": "https://github.com/nathraktim/react-flexi-window/issues"
+  },
+  "keywords": [
+    "react",
+    "window",
+    "draggable",
+    "resizable",
+    "modal",
+    "dialog",
+    "component",
+    "ui",
+    "glass",
+    "blur",
+    "zero-dependencies"
+  ],
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js",
+      "types": "./lib/index.d.ts"
+    }
+  },
+  "files": [
+    "dist/**/*",
+    "lib/*.d.ts",
+    "examples/**/*",
+    "docs/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "type": "module",
+  "scripts": {
+    "build:lib": "vite build --config vite.config.lib.js",
+    "lint": "eslint .",
+    "prepublishOnly": "npm run build:lib"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.29.0",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.5.2",
+    "eslint": "^9.29.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.2.0",
+    "vite": "^7.0.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "@tailwindcss/vite": "^4.1.11"
+  }
+}
