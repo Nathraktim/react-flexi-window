@@ -1,7 +1,7 @@
 {
   "name": "react-flexi-window",
   "description": "A flexible, draggable, and resizable window component for React with zero dependencies.",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "private": false,
   "license": "MIT",
   "author": {
@@ -12,7 +12,8 @@
     "type": "git",
     "url": "https://github.com/nathraktim/react-flexi-window.git"
   },
-  "homepage": "https://github.com/nathraktim/react-flexi-window#readme",
+  "homepage": "https://nathraktim.github.io/react-flexi-window/",
+  "npm": "https://www.npmjs.com/package/react-flexi-window",
   "bugs": {
     "url": "https://github.com/nathraktim/react-flexi-window/issues"
   },
@@ -34,16 +35,15 @@
   "types": "lib/index.d.ts",
   "exports": {
     ".": {
+      "types": "./lib/index.d.ts",
       "import": "./dist/index.esm.js",
-      "require": "./dist/index.cjs.js",
-      "types": "./lib/index.d.ts"
+      "require": "./dist/index.cjs.js"
     }
   },
   "files": [
     "dist/**/*",
     "lib/*.d.ts",
     "examples/**/*",
-    "docs/**/*",
     "README.md",
     "LICENSE"
   ],

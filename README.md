@@ -6,6 +6,7 @@ A flexible, draggable, and resizable window component for React with zero depend
 
 - 🖱️ **Draggable**: Click and drag to move windows around
 - 📏 **Resizable**: Drag edges and corners to resize windows
+- 🎯 **Assistive Resize Handles**: Large, visible corner handles appear during interaction for enhanced usability
 - 🔒 **Boundary constraints**: Optionally confine windows to viewport
 - 🎨 **Customizable styling**: Built-in color themes and effects
 - 📱 **Responsive**: Adapts to viewport changes automatically
@@ -232,9 +233,15 @@ const MyWindow: React.FC<WindowComponentProps> = (props) => {
 
 ### Smart Interaction Handling
 - **Interactive Elements**: The component automatically prevents dragging when clicking on interactive elements like buttons, inputs, textareas, links, and contentEditable elements
+- **Assistive Resize Handles**: During window interaction, large 40x40px corner handles appear to make resizing easier, especially on touch devices
 - **Viewport Responsiveness**: Windows automatically adjust their position and size when the browser window is resized
 - **Boundary Enforcement**: When `boundary={true}`, windows are constrained both during dragging and when the viewport changes
 - **Text Selection**: Text selection is preserved when not interacting with the window
+
+### Resize Handle Behavior
+- **Default State**: Invisible 8px resize handles around edges and corners for clean appearance
+- **During Interaction**: Large, visible 40px corner handles appear for enhanced usability
+- **Touch-Friendly**: Larger handles provide better touch target areas on mobile devices
 
 ### Performance Optimizations
 - Uses `useCallback` for event handlers to prevent unnecessary re-renders
