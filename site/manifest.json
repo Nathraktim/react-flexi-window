@@ -1,0 +1,54 @@
+{
+  "name": "React Flexi Window",
+  "short_name": "FlexiWindow",
+  "description": "A flexible and modern React window component library for creating beautiful, responsive user interfaces with advanced window management capabilities.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#646cff",
+  "orientation": "any",
+  "scope": "/",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["productivity", "utilities", "developer"],
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/react.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/ogImage.jpg",
+      "sizes": "1200x630",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "React Flexi Window Demo"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Demo",
+      "short_name": "Demo",
+      "description": "Try the interactive demo",
+      "url": "/#demo",
+      "icons": [
+        {
+          "src": "/vite.svg",
+          "sizes": "any",
+          "type": "image/svg+xml"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}
