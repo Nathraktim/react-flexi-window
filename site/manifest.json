@@ -13,13 +13,13 @@
   "categories": ["productivity", "utilities", "developer"],
   "icons": [
     {
-      "src": "/vite.svg",
+      "src": "/react-flexi-window/vite.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
     },
     {
-      "src": "/react.svg",
+      "src": "/react-flexi-window/react.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
@@ -27,7 +27,7 @@
   ],
   "screenshots": [
     {
-      "src": "/ogImage.jpg",
+      "src": "/react-flexi-window/ogImage.jpg",
       "sizes": "1200x630",
       "type": "image/jpeg",
       "form_factor": "wide",
@@ -42,7 +42,7 @@
       "url": "/#demo",
       "icons": [
         {
-          "src": "/vite.svg",
+          "src": "/react-flexi-window/vite.svg",
           "sizes": "any",
           "type": "image/svg+xml"
         }
